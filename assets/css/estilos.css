@@ -1,0 +1,45 @@
+:root {
+  --white: #fff;
+  --back: #000;
+  --very-light-pink: #c7c7c7;
+  --text-input-field: #f7f7f7;
+  --hospital-green: #acd9b2;
+  --sm: 14px;
+  --md: 15px;
+  --lg: 18px;
+}
+
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Trebuchet MS";
+}
+
+.info {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+html,
+body,
+#wrapper {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#wrapper td {
+  vertical-align: middle;
+  text-align: center;
+}
