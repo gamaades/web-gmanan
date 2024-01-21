@@ -1,45 +1,129 @@
-:root {
-  --white: #fff;
-  --back: #000;
-  --very-light-pink: #c7c7c7;
-  --text-input-field: #f7f7f7;
-  --hospital-green: #acd9b2;
-  --sm: 14px;
-  --md: 15px;
-  --lg: 18px;
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
   color: #fff;
-  font-size: 18px;
-  line-height: 24px;
-  font-family: "Trebuchet MS";
+  padding: 20px;
+  text-align: center;
 }
 
-.info {
-  width: 300px;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 40px;
+nav ul {
+  list-style: none;
 }
 
-html,
-body,
-#wrapper {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
+nav ul li {
+  display: inline;
+  margin-right: 20px;
 }
-#wrapper td {
-  vertical-align: middle;
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+section {
+  padding: 40px;
+}
+
+section h2 {
+  color: #333;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
   text-align: center;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* Estilos específicos para la sección de proyectos */
+#proyectos {
+  background-color: #f4f4f4;
+}
+
+/* Estilos específicos para la sección de habilidades */
+#habilidades {
+  background-color: #e0e0e0;
+}
+
+/* Estilos específicos para el formulario de contacto */
+#contacto {
+  background-color: #f9f9f9;
+}
+
+/* Estilos para el botón flotante de volver arriba */
+#btnVolverArriba {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Estilos para la sección de Experiencia Laboral */
+#experiencia {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+/* Estilos para cada trabajo */
+.trabajo {
+  margin-bottom: 30px;
+}
+
+.trabajo h3 {
+  color: #007bff;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.trabajo .fecha {
+  color: #555;
+  font-size: 14px;
+}
+
+.trabajo .descripcion {
+  line-height: 1.6;
+  color: #333;
+}
+
+
+
+/* Media query para hacer el diseño responsive */
+@media screen and (max-width: 600px) {
+  header {
+      padding: 10px;
+  }
+
+  nav ul li {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  section {
+      padding: 20px;
+  }
 }
