@@ -1,10 +1,15 @@
-body, h1, h2, p, ul, li {
+body,
+h1,
+h2,
+p,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   line-height: 1.6;
 }
 
@@ -81,6 +86,15 @@ footer ul li {
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btnVolverArriba.show {
+  display: block;
+}
+
+#btnVolverArriba:hover {
+  background-color: #0056b3;
 }
 
 /* Estilos para la sección de Experiencia Laboral */
@@ -110,20 +124,40 @@ footer ul li {
   color: #333;
 }
 
-
+/* Diseño responsive para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  header {
+      padding: 15px;
+  }
+  
+  nav ul li {
+      display: block;
+      margin-bottom: 15px;
+  }
+  
+  section {
+      padding: 30px;
+  }
+  
+  .proyectos {
+      background-color: #f4f4f4;
+  }
+  
+  /* Ajusta los márgenes y espacios necesarios */
+}
 
 /* Media query para hacer el diseño responsive */
 @media screen and (max-width: 600px) {
   header {
-      padding: 10px;
+    padding: 10px;
   }
 
   nav ul li {
-      display: block;
-      margin-bottom: 10px;
+    display: block;
+    margin-bottom: 10px;
   }
 
   section {
-      padding: 20px;
+    padding: 20px;
   }
 }
