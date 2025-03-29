@@ -1,0 +1,157 @@
+:root {
+  --bg-color: #f3f3f3;
+  --calc-bg: #ffffff;
+  --text-color: #000;
+  --border-color: #42a5f5;
+  --btn-hover-scale: 1.1;
+}
+
+body.dark-mode {
+  --bg-color: #1e1e1e;
+  --calc-bg: #2c2c2c;
+  --text-color: #fff;
+  --border-color: #90caf9;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background 0.3s ease-in-out;
+}
+
+.calculadora {
+  background: var(--calc-bg);
+  padding: 20px 15px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.calculadora:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+.pantalla {
+  width: calc(100% - 20px);
+  height: 70px;
+  font-size: 2em;
+  text-align: right;
+  padding: 10px;
+  border: 2px solid var(--border-color);
+  background: var(--calc-bg);
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.boton {
+  padding: 18px;
+  font-size: 1.4em;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.boton:hover {
+  transform: scale(var(--btn-hover-scale));
+}
+
+.boton:active {
+  transform: scale(1);
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.boton.numero {
+  background: #4caf50;
+  color: white;
+}
+
+.boton.numero:hover {
+  background: #43a047;
+}
+
+.boton.operacion {
+  background: #ff7043;
+  color: white;
+}
+
+.boton.operacion:hover {
+  background: #f4511e;
+}
+
+.boton.edicion {
+  background: #42a5f5;
+  color: white;
+}
+
+.boton.edicion:hover {
+  background: #1e88e5;
+}
+
+.boton.igual {
+  background: #ffa000;
+  color: white;
+  grid-column: span 2;
+  font-size: 1.6em;
+  height: 60px;
+}
+
+.boton.igual:hover {
+  background: #ff8f00;
+}
+
+.boton.porcentaje {
+  background: #9c27b0;
+  color: white;
+}
+
+.boton.porcentaje:hover {
+  background: #7b1fa2;
+}
+
+.boton.tema {
+  background: #757575;
+  color: white;
+  font-size: 1.2em;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.boton.tema:hover {
+  background: #616161;
+}
+
+@media (max-width: 480px) {
+  .calculadora {
+    width: 90%;
+  }
+
+  .boton {
+    padding: 10px;
+    font-size: 1em;
+  }
+}

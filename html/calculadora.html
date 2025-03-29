@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+  <link rel="stylesheet" href="../assets/css/estilo-calculadora.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="calculadora">
+      <button class="boton tema" onclick="toggleModoOscuro()">
+        <i id="icono-tema" class="fas fa-moon"></i>
+      </button>
+      <input type="text" class="pantalla" id="pantalla" readonly />
+      <div class="botones">
+        <button class="boton edicion" onclick="limpiarPantalla()">
+          <i class="fas fa-trash"></i>
+        </button>
+        <button class="boton edicion" onclick="borrarUltimo()">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="boton operacion" onclick="agregarOperacion('/')">
+          ÷
+        </button>
+        <button class="boton operacion" onclick="agregarOperacion('*')">
+          ×
+        </button>
+
+        <button class="boton numero" onclick="agregarNumero('7')">7</button>
+        <button class="boton numero" onclick="agregarNumero('8')">8</button>
+        <button class="boton numero" onclick="agregarNumero('9')">9</button>
+        <button class="boton operacion" onclick="agregarOperacion('-')">
+          −
+        </button>
+
+        <button class="boton numero" onclick="agregarNumero('4')">4</button>
+        <button class="boton numero" onclick="agregarNumero('5')">5</button>
+        <button class="boton numero" onclick="agregarNumero('6')">6</button>
+        <button class="boton operacion" onclick="agregarOperacion('+')">
+          +
+        </button>
+
+        <button class="boton numero" onclick="agregarNumero('1')">1</button>
+        <button class="boton numero" onclick="agregarNumero('2')">2</button>
+        <button class="boton numero" onclick="agregarNumero('3')">3</button>
+        <button class="boton porcentaje" onclick="calcularPorcentaje()">
+          %
+        </button>
+        <button class="boton igual" onclick="calcularResultado()">=</button>
+
+        <button class="boton numero" onclick="agregarNumero('0')">0</button>
+        <button class="boton numero" onclick="agregarNumero('.')">.</button>
+      </div>
+    </div>
+    <script src="../assets/js/calculadora.js"></script>
+  </body>
+</html>
