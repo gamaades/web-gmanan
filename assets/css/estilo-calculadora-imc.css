@@ -1,0 +1,190 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #0078d7;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input,
+select,
+button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  font-size: 1em;
+}
+
+.resultado {
+  margin-top: 20px;
+}
+
+.barra-imc {
+  position: relative;
+  display: flex;
+  height: 35px;
+  margin-top: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.barra-imc div {
+  flex: 1;
+  text-align: center;
+  color: white;
+  font-size: 0.85em;
+  line-height: 35px;
+}
+
+.indicador {
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  background: #111;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: left 0.4s ease;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+.barra-imc .activo {
+  filter: brightness(1.1) contrast(1.05);
+}
+
+.bajo {
+  background-color: #00bfff;
+}
+.normal {
+  background-color: #4caf50;
+}
+.sobrepeso {
+  background-color: #ffeb3b;
+  color: black;
+}
+.obesidad1 {
+  background-color: #ff9800;
+}
+.obesidad2 {
+  background-color: #f44336;
+}
+.obesidad3 {
+  background-color: #b71c1c;
+}
+
+.resultado-box {
+  background-color: #e3f2fd;
+  border-left: 5px solid #0078d7;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+caption {
+  caption-side: top;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+thead {
+  background-color: #0078d7;
+  color: white;
+}
+
+thead th {
+  padding: 12px;
+  text-align: center;
+  font-size: 1em;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody td {
+  padding: 12px;
+  text-align: center;
+  font-size: 0.95em;
+  color: #333;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f5faff;
+}
+
+tbody tr:hover {
+  background-color: #eaf4ff;
+}
+
+/* Opcional: resaltar según la clasificación */
+tbody tr:nth-child(1) td { color: #00bfff; font-weight: 600; } /* Bajo peso */
+tbody tr:nth-child(2) td { color: #4caf50; font-weight: 600; } /* Normal */
+tbody tr:nth-child(3) td { color: #ff9800; font-weight: 600; } /* Sobrepeso */
+tbody tr:nth-child(4) td { color: #ff7043; font-weight: 600; } /* Obesidad I */
+tbody tr:nth-child(5) td { color: #f44336; font-weight: 600; } /* Obesidad II */
+tbody tr:nth-child(6) td { color: #b71c1c; font-weight: 600; } /* Obesidad III */
+
+
+/* Responsividad en móviles */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    background: white;
+  }
+
+  tbody td {
+    text-align: left;
+    padding: 8px 10px;
+    position: relative;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #0078d7;
+    display: block;
+    margin-bottom: 4px;
+  }
+}
